@@ -4,7 +4,7 @@ public class Car extends Vehicle {
     private int numberOfDoors;
 
     public Car(String make, String model, int year, int numberOfDoors) {
-        super(make, model, year);
+        super();
         setNumberOfDoors(numberOfDoors);
     }
 
@@ -19,10 +19,7 @@ public class Car extends Vehicle {
         this.numberOfDoors = numberOfDoors;
     }
 
-    // Overriding displayInfo to include doors
-    @Override
     public void displayInfo() {
-        super.displayInfo();
         System.out.println("Doors: " + numberOfDoors);
     }
 }
