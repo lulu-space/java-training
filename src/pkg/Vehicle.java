@@ -1,28 +1,38 @@
 package pkg;
 
 public class Vehicle {
-	private String brand;
-	private int year;
 	
-	public Vehicle(String brand, int year) {
+	public String brand;
+	private int year;
+	protected int id;
+	
+	public Vehicle() {
+		 this.brand="unknown";
+		 this.year=0;
+		 this.id=0;
+	}
+	
+	public Vehicle(String brand, int year, int id) {
 		this.brand=brand;
 		this.year=year;
-	}
-	
-	public void SetBrand(String brand) {
-		this.brand=brand;
-	}
-	
-	public String GetBrand() {
-		return brand;
+		this.id=id;
 	}
 	
 	public void SetYear(int year) {
-		this.year=year;
+	    if (year > 0) this.year = year;
+	    else {
+	    	this.year=0;
+	    }
 	}
 	
 	public int GetYear() {
 		return year;
 	}
+	
+    @Override
+    public String toString() {
+        return "Vehicle [brand=" + brand + ", year=" + year + ", id=" + id + "]";
+    }
+	
 }
 
