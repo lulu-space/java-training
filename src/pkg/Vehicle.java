@@ -29,6 +29,17 @@ public class Vehicle {
 		return year;
 	}
 	
+	public int GetId() {
+		return id;
+	}
+	
+	public void SetId(int id) {
+	    if (id > 0) this.id = id;
+	    else {
+	    	this.id=0;
+	    }
+	}
+	
     @Override
     public String toString() {
         return "Vehicle [brand=" + brand + ", year=" + year + ", id=" + id + "]";
