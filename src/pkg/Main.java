@@ -30,7 +30,7 @@ public static void main(String[] args) {
 //Print it to console
     
     Path path = Path.of("data.txt");  //File will be created in same folder project.
-
+    								//relative path
     try {
         // WRITE
         Files.writeString(path,
@@ -42,9 +42,10 @@ public static void main(String[] args) {
         String content = Files.readString(path);
 
         System.out.println("File content:");
-        System.out.println(content);
+        System.out.println(content);         //print file content
 
     } catch (IOException e) {
         e.printStackTrace();
     }
+    
 }}
