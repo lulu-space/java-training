@@ -1,5 +1,9 @@
 package pkg;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.io.IOException;
+
 public class Main { 
 
 public static void main(String[] args) {
@@ -18,4 +22,29 @@ public static void main(String[] args) {
 
     v1.SetYear(2025);
     System.out.println("After setting year (private): " + v1.GetYear());
+    
+    
+//Create a file
+//Write text into it
+//Read the text back
+//Print it to console
+    
+    Path path = Path.of("data.txt");  //File will be created in same folder project.
+
+    try {
+        // WRITE
+        Files.writeString(path,
+                "Java File I/O Example\n" +
+                "Using NIO API\n" +
+                "Name: Layan\n");
+
+        // READ
+        String content = Files.readString(path);
+
+        System.out.println("File content:");
+        System.out.println(content);
+
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
 }}
