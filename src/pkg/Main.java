@@ -1,5 +1,7 @@
 package pkg;
 
+import java.io.IOException;
+
 public class Main { 
 
 public static void main(String[] args) {
@@ -19,8 +21,16 @@ public static void main(String[] args) {
     v1.SetYear(2025);
     System.out.println("After setting year (private): " + v1.GetYear());
 
-    ServiceClass service = new ServiceClass("data.txt");
-    service.writeFile();
-    service.appendToFile();
-    service.readFile();
+    FileService fileService = new FileService("data.txt");
+    try {
+        fileService.writeToFile("Name: Layan");
+        fileService.writeToFile("Java Version: " + System.getProperty("java.version"));
+        fileService.writeToFile("Java Home: " + System.getProperty("java.home"));
+        System.out.println("File content:");
+        System.out.println(fileService.readFromFile());
+
+    } catch (IOException e) {
+        System.out.println("File operation failed: " + e.getMessage());
+    }
+
 }}

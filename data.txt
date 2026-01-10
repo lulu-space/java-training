@@ -1,3 +1,15 @@
 Java File I/O Example
 Using NIO API
 Name: Layan
+Name: Layan
+Java Version: 25.0.1
+Java Home: C:\Program Files\Java\jdk-25
+Name: Layan
+Java Version: 25.0.1
+Java Home: C:\Program Files\Java\jdk-25
+Name: Layan
+Java Version: 25.0.1
+Java Home: C:\Program Files\Java\jdk-25
+Name: Layan
+Java Version: 25.0.1
+Java Home: C:\Program Files\Java\jdk-25
